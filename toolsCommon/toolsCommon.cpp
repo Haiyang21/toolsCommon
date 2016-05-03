@@ -13,9 +13,10 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	convolution_test();
 	//test();
 	//texture_test();
-	warp_test();
+	//warp_test();
 	return 0;
 }
 

@@ -286,5 +286,5 @@ bool BufferManager::download(void* buf, size_t pitch, int x_offset,
 		return CU_FAILED;
 	}
 
-	return true;
+	return CU_SUCCESS;
 }

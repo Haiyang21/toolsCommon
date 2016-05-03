@@ -4,6 +4,7 @@
 extern "C"{
 	void test();
 	void texture_test();
+	void convolution_test();
 	int warp_test();
 }
 #endif//#ifndef FUNCTIONS_H_

@@ -2,7 +2,7 @@
 #include <device_launch_parameters.h>
 #include <stdio.h>
 #include "functions.h"
-
+//çº¿ç¨‹ç°‡æ“ä½œ
 __global__ void bcast(int arg) {
 	int laneId = threadIdx.x & 0x1f; 
 	int value; 
@@ -22,7 +22,7 @@ __global__ void scan4() {
 		// the __shfl unconditionally so that we 
 		// can read even from threads which won't do a 
 		// sum, and then conditionally assign the result. 
-		int n = __shfl_up(value, i, 8); //value: laneId ³ÖÓÐµÄÖµ; n: »ñÈ¡(laneId-i)¶ÔÓ¦µÄvalue£» i: Æ«ÒÆ
+		int n = __shfl_up(value, i, 8); //value: laneId æŒæœ‰çš„å€¼; n: èŽ·å–(laneId-i)å¯¹åº”çš„valueï¼› i: åç§»
 		printf("laneID %d value = %d n = %d\n", laneId, value, n);
 		if (laneId >= i) 
 			value += n; 
